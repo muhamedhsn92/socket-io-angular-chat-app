@@ -1,0 +1,12 @@
+li a {cursor: pointer;}
+.selectedRow{
+    color: white;
+    background-color: rgba(83, 152, 243, 0.685);
+}
+/* .side_bar{
+    border: 0;
+    border-top: 1px solid;
+} */
+.content{
+    background-color: rgba(219, 219, 219, 0.329);
+}

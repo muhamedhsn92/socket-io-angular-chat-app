@@ -1,0 +1,50 @@
+<!-- <div class="container-fluid" style="height: 100%;width: 100%;">
+    <img src="https://www.elastic.co/guide/en/kibana/master/images/Dashboard_example.png" height="100%" width="100%"
+        alt="">
+</div> -->
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" role="tab" aria-controls="home"
+            aria-selected="true">Conversation</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Contacts</a>
+    </li>
+ 
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        Conversation data
+        <div class="mt-auto"></div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Contacts data</div>
+ </div> -->
+
+<div class="container">
+
+    <div style="display: grid ;grid-template-columns: 4fr 8fr">
+        <div class="side_bar">
+            <ul class="list-group" *ngFor="let item of sidebar_items;let i = index">
+                <li class="list-group-item p-3 m-0" style="background-color: azure;" (click)="getRowValue(item , i )"> {{item?.item}}</li>
+                <!-- [class.activeRow]="i == selectedRow"  -->
+                <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li> -->
+            </ul>
+        </div>
+        <div class="content p-3">
+            <div *ngFor="let itemX of detailContent">
+                <p class="p-2  bg-danger w-25 ml-auto text-white" style="border-radius: 10px" *ngIf="itemX?.first">
+                    {{itemX?.first}} <br /> <small class="text-dark">{{date | date:'fullDate'}} </small>
+                </p>
+                <p class="p-2 bg-info w-25" style="border-radius: 10px" *ngIf="itemX?.second"> {{itemX?.second}} <br>
+                    <small> {{date |
+                        date:'fullDate'}}</small>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

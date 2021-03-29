@@ -1,9 +1,15 @@
-<div class="container"> 
+<div class="container">
     <h1 class="text-center">Login Form</h1>
     <div [formGroup]="form">
         <div class="form-group">
-             <input class="form-control" placeholder="Enter Your Id" formControlName="idNumber">
+            <input class="form-control" placeholder="Enter Your Id" formControlName="idNumber">
         </div>
-        <button class="btn btn-primary" (click)="handleSubmit()">Submit</button>
+        <div class="mt-2">
+
+            <button class="btn btn-primary  " (click)="handleSubmit()">Submit</button>
+            <button class="btn btn-info mx-2" (click)="generateuuid()">Generate UUID</button>
+            <button class="btn btn-danger " (click)="form.reset()">Clear</button>
+        </div>
+
     </div>
 </div>
